@@ -74,7 +74,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Test Measure' = 3
+	measure 'Test Measure' = 5
 		formatString: 0
 		lineageTag: 09d26c70-51fe-4a54-b1df-29d64a5c3b05
 
