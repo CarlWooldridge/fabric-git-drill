@@ -1,0 +1,111 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "7bfe6f844458a086ca71",
+  "position": {
+    "x": 512.86266477253957,
+    "y": 539.92665763652576,
+    "z": 1,
+    "height": 300.41032079024745,
+    "width": 1020.3125309722818
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_emp_public"
+                    }
+                  },
+                  "Property": "emp_id"
+                }
+              },
+              "queryRef": "Sum(v_emp_public.emp_id)",
+              "nativeQueryRef": "emp_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_emp_public"
+                    }
+                  },
+                  "Property": "emp_name"
+                }
+              },
+              "queryRef": "v_emp_public.emp_name",
+              "nativeQueryRef": "emp_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_emp_public"
+                    }
+                  },
+                  "Property": "region"
+                }
+              },
+              "queryRef": "v_emp_public.region",
+              "nativeQueryRef": "region"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "65248c895dd100c0a6e1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "v_emp_public"
+              }
+            },
+            "Property": "emp_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "69986980b3b711623be1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "v_emp_public"
+              }
+            },
+            "Property": "region"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "64a78be85941a6800cee",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "v_emp_public"
+              }
+            },
+            "Property": "emp_id"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

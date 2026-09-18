@@ -1,0 +1,33 @@
+relationship 1df0e499-3960-9762-ccbf-f711d3f61eaa
+	fromColumn: fact_trips.doLocationId
+	toColumn: dim_location_to.LocationId
+
+relationship d7081320-1f94-d24d-caee-7e3063ae82ff
+	fromColumn: fact_trips.puLocationId
+	toColumn: dim_location_from.LocationId
+
+relationship 531ab936-0c78-d1fd-c2cc-8bd7eb8ad649
+	fromColumn: fact_trips.paymentType
+	toColumn: dim_paymenttype.PaymentTypeID
+
+relationship 245a0bf4-44c6-6ac8-3e20-94a4f6858de3
+	fromColumn: fact_trips.vendorID
+	toColumn: dim_vendor.VendorID
+
+relationship a56824f0-82b6-feea-cb25-b0a398ddba64
+	fromColumn: fact_trips.tripType
+	toColumn: dim_triptype.TripTypeID
+
+relationship e9c26738-e8e1-be7a-b7ba-24a039894652
+	fromColumn: fact_trips.rateCodeID
+	toColumn: dim_ratecode.RateCodeID
+
+relationship 73df5047-959b-8e18-f10d-c79b2e6605b3
+	fromColumn: fact_trips.PickupDate
+	toColumn: dim_date.Date
+
+relationship 3c3af837-3db7-8958-eda0-683ca05694d1
+	isActive: false
+	fromColumn: fact_trips.DropoffDate
+	toColumn: dim_date.Date
+

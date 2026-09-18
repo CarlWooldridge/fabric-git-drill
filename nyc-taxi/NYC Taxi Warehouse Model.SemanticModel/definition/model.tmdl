@@ -1,0 +1,25 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["fact_trips","dim_date","dim_location_from","dim_location_to","dim_paymenttype","dim_ratecode","dim_triptype","dim_vendor"]
+
+ref table fact_trips
+ref table dim_date
+ref table dim_location_from
+ref table dim_location_to
+ref table dim_paymenttype
+ref table dim_ratecode
+ref table dim_triptype
+ref table dim_vendor
+ref table _Measures
+
+ref cultureInfo en-US
+

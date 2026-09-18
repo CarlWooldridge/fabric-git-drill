@@ -1,0 +1,89 @@
+table dim_date
+	lineageTag: 3e273100-21c1-49ae-b02b-82dd9cd10260
+	dataCategory: Time
+
+	column Datetime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 45d58063-aa72-4c29-bb52-d105b18bc8a9
+		summarizeBy: none
+		sourceColumn: Datetime
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: 8eee4804-710b-4ee4-8ca5-7fc23896929c
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: e5d66c5c-ae1e-42d6-bd75-286303b5f351
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: eee7be68-af22-4ce5-a3f1-5ec55a66350d
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 9517f010-ae90-4fc8-a3a7-eece3031aee1
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: string
+		lineageTag: fe370128-5a29-4854-9aa4-3b25841542eb
+		summarizeBy: none
+		sourceColumn: MonthName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayName
+		dataType: string
+		lineageTag: dba944c7-3878-463a-8d29-74f8f3aadc29
+		summarizeBy: none
+		sourceColumn: DayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column holiday
+		dataType: string
+		lineageTag: 0dbb7878-2e8c-41b3-8c81-84a36d87907a
+		summarizeBy: none
+		sourceColumn: holiday
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_date = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("pqvferdbdyhuldownyhas22oui-ayl57dgrd6cutejfuixcgpgzgm.datawarehouse.fabric.microsoft.com", "NYCTaxiWH"),
+				  #"Navigation 1" = Source{[Schema = "gold", Item = "dim_date"]}[Data]
+				in
+				  #"Navigation 1"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

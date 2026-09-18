@@ -1,0 +1,51 @@
+table dim_paymenttype
+	lineageTag: 6c1bef79-8add-45a6-82d9-6a2193a1e3ae
+
+	column PaymentTypeID
+		dataType: int64
+		formatString: 0
+		lineageTag: 462d620b-20cc-418a-b955-50fc35612cf7
+		summarizeBy: none
+		sourceColumn: PaymentTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaymentMethod
+		dataType: string
+		lineageTag: b135b23c-0411-45a3-aa10-73a04ebbee84
+		summarizeBy: none
+		sourceColumn: PaymentMethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column ElectronicPayment
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c8010fb8-2945-4be9-bbbf-26d266984c31
+		summarizeBy: none
+		sourceColumn: ElectronicPayment
+
+		annotation SummarizationSetBy = Automatic
+
+	column RequiresTipEntry
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8fbfba6f-5087-43a8-85c9-3351deae5100
+		summarizeBy: none
+		sourceColumn: RequiresTipEntry
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_paymenttype = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("pqvferdbdyhuldownyhas22oui-ayl57dgrd6cutejfuixcgpgzgm.datawarehouse.fabric.microsoft.com", "NYCTaxiWH"),
+				  #"Navigation 1" = Source{[Schema = "gold", Item = "dim_paymenttype"]}[Data]
+				in
+				  #"Navigation 1"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

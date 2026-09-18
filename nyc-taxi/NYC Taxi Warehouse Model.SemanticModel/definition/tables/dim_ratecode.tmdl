@@ -1,0 +1,41 @@
+table dim_ratecode
+	lineageTag: 31abdc4f-24a8-4e33-83bd-7e0bd6a9e99e
+
+	column RateCodeID
+		dataType: int64
+		formatString: 0
+		lineageTag: 986274c1-5415-4d6c-91b3-a501fa87aadf
+		summarizeBy: none
+		sourceColumn: RateCodeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RateCodeName
+		dataType: string
+		lineageTag: dcc9c9c2-16a5-41fc-9e8a-5b8bf28f62c8
+		summarizeBy: none
+		sourceColumn: RateCodeName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: ea01abf5-8ab2-42e2-aac3-05a053d5330c
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_ratecode = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("pqvferdbdyhuldownyhas22oui-ayl57dgrd6cutejfuixcgpgzgm.datawarehouse.fabric.microsoft.com", "NYCTaxiWH"),
+				  #"Navigation 1" = Source{[Schema = "gold", Item = "dim_ratecode"]}[Data]
+				in
+				  #"Navigation 1"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

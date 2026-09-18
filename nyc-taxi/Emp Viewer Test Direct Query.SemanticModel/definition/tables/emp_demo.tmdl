@@ -1,0 +1,75 @@
+table emp_demo
+	lineageTag: 73aae1f1-2de3-4d2c-8658-72c5bc766d16
+
+	column emp_id
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e14a2a25-8fff-49f7-9cc4-96da0372d908
+		summarizeBy: sum
+		sourceColumn: emp_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column emp_name
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 069a7524-0e0a-4aba-a1de-1ee856d3aff7
+		summarizeBy: none
+		sourceColumn: emp_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(20)
+		lineageTag: f2f741ee-4e57-4a1f-b4a6-91d4821827a9
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 8571836d-8fe3-4565-8161-814d6eb3ac39
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column salary
+		dataType: double
+		sourceProviderType: decimal(10, 2)
+		lineageTag: e665e2c8-d311-47c3-9a7d-adaac3771876
+		summarizeBy: sum
+		sourceColumn: salary
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column owner_upn
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(100)
+		lineageTag: 4feaac62-3b57-4f84-b943-13f38acd9ae1
+		summarizeBy: none
+		sourceColumn: owner_upn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition emp_demo = m
+		mode: directQuery
+		source =
+				let
+				  Source = Sql.Database("pqvferdbdyhuldownyhas22oui-ayl57dgrd6cutejfuixcgpgzgm.datawarehouse.fabric.microsoft.com", "NYCTaxiWH"),
+				  #"Navigation 1" = Source{[Schema = "dbo", Item = "emp_demo"]}[Data]
+				in
+				  #"Navigation 1"
+
+	annotation PBI_ResultType = Table
+

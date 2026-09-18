@@ -1,0 +1,77 @@
+table emp_demo
+	lineageTag: 3ce452df-1e31-4588-8503-ed900ecda4f3
+	sourceLineageTag: [dbo].[emp_demo]
+
+	column emp_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9c992e64-b67d-4f77-a618-b9ba29a185f6
+		sourceLineageTag: emp_id
+		summarizeBy: sum
+		sourceColumn: emp_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column emp_name
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 3b188280-74c2-46bf-a3d6-be6caa502b4c
+		sourceLineageTag: emp_name
+		summarizeBy: none
+		sourceColumn: emp_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		sourceProviderType: varchar(20)
+		lineageTag: 7733798a-23c1-4567-b98d-497aad9c0ddb
+		sourceLineageTag: region
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 0322f7a5-92c1-4ea5-84cf-ac89d4684102
+		sourceLineageTag: email
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column salary
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		sourceProviderType: decimal(10, 2)
+		lineageTag: 92cf5e96-f60d-45cd-a5ce-e27d0b848c1e
+		sourceLineageTag: salary
+		summarizeBy: sum
+		sourceColumn: salary
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column owner_upn
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 5d625a25-bef3-4ab4-a5b3-7408d1a6c975
+		sourceLineageTag: owner_upn
+		summarizeBy: none
+		sourceColumn: owner_upn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition emp_demo = entity
+		mode: directLake
+		source
+			entityName: emp_demo
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

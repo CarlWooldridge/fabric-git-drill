@@ -1,0 +1,134 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "0d81b8c1ea412ee68500",
+  "position": {
+    "x": 326.99654775604142,
+    "y": 363.24510932105869,
+    "z": 1,
+    "height": 256.29459148446495,
+    "width": 1153.325661680092
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_emp_public"
+                    }
+                  },
+                  "Property": "emp_id"
+                }
+              },
+              "queryRef": "Sum(v_emp_public.emp_id)",
+              "nativeQueryRef": "emp_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_emp_public"
+                    }
+                  },
+                  "Property": "emp_name"
+                }
+              },
+              "queryRef": "v_emp_public.emp_name",
+              "nativeQueryRef": "emp_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_emp_public"
+                    }
+                  },
+                  "Property": "region"
+                }
+              },
+              "queryRef": "v_emp_public.region",
+              "nativeQueryRef": "region"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "v_emp_public"
+                      }
+                    },
+                    "Property": "emp_id"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a203655729cd81019e2b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "v_emp_public"
+              }
+            },
+            "Property": "emp_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8d3ec952702a694add21",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "v_emp_public"
+              }
+            },
+            "Property": "region"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d7380e58c3ac94c06071",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "v_emp_public"
+              }
+            },
+            "Property": "emp_id"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

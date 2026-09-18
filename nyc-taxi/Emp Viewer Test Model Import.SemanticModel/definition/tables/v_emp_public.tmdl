@@ -1,0 +1,39 @@
+table v_emp_public
+	lineageTag: 599ac2bd-4918-4f2b-960d-8f38f0f899ea
+
+	column emp_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3021bdfd-23ef-4411-886c-d01406367c1b
+		summarizeBy: sum
+		sourceColumn: emp_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column emp_name
+		dataType: string
+		lineageTag: 4f29e6bc-bcbb-439d-8780-6edf557981a4
+		summarizeBy: none
+		sourceColumn: emp_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: 0b55b3c0-1b8d-4594-b612-2e87a8510768
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	partition v_emp_public = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("pqvferdbdyhuldownyhas22oui-ayl57dgrd6cutejfuixcgpgzgm.datawarehouse.fabric.microsoft.com", "NYCTaxiWH"),
+				  #"Navigation 1" = Source{[Schema = "dbo", Item = "v_emp_public"]}[Data]
+				in
+				  #"Navigation 1"
+
+	annotation PBI_ResultType = Table
+

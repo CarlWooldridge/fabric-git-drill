@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "Fact Table Compare"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e0eb0fde-be82-b52d-4960-42d4bbd3ff5d"
+  }
+}

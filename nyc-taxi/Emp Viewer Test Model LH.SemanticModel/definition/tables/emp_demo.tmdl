@@ -1,0 +1,69 @@
+table emp_demo
+	lineageTag: 79c51831-2e92-4c50-90b0-170b006b3f04
+	sourceLineageTag: [dbo].[emp_demo]
+
+	column emp_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 9db5c7ac-35f8-4a5a-8c04-a43827e73f0f
+		sourceLineageTag: emp_id
+		summarizeBy: sum
+		sourceColumn: emp_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column emp_name
+		dataType: string
+		lineageTag: 4bacba1b-d3b9-443e-a195-6efce4f9d614
+		sourceLineageTag: emp_name
+		summarizeBy: none
+		sourceColumn: emp_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: f772e243-5c87-432c-97ec-7f70bee9b8c4
+		sourceLineageTag: region
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: bb3dfca2-d43f-4198-9d44-939b6b8fa490
+		sourceLineageTag: email
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column salary
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 643cb173-3f61-48da-8a9e-5c7ee5980aea
+		sourceLineageTag: salary
+		summarizeBy: sum
+		sourceColumn: salary
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column owner_upn
+		dataType: string
+		lineageTag: bc5adeab-df00-4e35-9252-314c4bfae1f1
+		sourceLineageTag: owner_upn
+		summarizeBy: none
+		sourceColumn: owner_upn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition emp_demo = entity
+		mode: directLake
+		source
+			entityName: emp_demo
+			schemaName: dbo
+			expressionSource: 'DirectLake - NYCTaxiLH'
+

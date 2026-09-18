@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "Optimize WH fact"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "00eab4ff-0372-848a-43cd-e28642519a03"
+  }
+}

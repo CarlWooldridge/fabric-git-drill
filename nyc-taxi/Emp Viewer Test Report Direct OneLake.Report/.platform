@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Emp Viewer Test Report Direct OneLake"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "541d1980-950e-b5b0-491b-e8332dac1a80"
+  }
+}

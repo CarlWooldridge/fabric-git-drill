@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Emp Viewer Test Model LH"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c018d207-8912-8533-4ea6-e04f4caab1be"
+  }
+}

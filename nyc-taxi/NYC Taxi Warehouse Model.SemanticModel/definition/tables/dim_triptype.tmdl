@@ -1,0 +1,41 @@
+table dim_triptype
+	lineageTag: b2a1e033-6904-4197-aa83-027f0a887384
+
+	column TripTypeID
+		dataType: int64
+		formatString: 0
+		lineageTag: 90330a02-80e9-47cb-ad37-ca7f39a4bca9
+		summarizeBy: none
+		sourceColumn: TripTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TripTypeName
+		dataType: string
+		lineageTag: a37abfe4-9b16-4f95-9494-3239ee418b39
+		summarizeBy: none
+		sourceColumn: TripTypeName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: e7104eeb-e917-43d7-9a22-43a9717ff8f5
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_triptype = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("pqvferdbdyhuldownyhas22oui-ayl57dgrd6cutejfuixcgpgzgm.datawarehouse.fabric.microsoft.com", "NYCTaxiWH"),
+				  #"Navigation 1" = Source{[Schema = "gold", Item = "dim_triptype"]}[Data]
+				in
+				  #"Navigation 1"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

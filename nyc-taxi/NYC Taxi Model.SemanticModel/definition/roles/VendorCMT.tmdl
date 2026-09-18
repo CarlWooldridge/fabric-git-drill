@@ -1,0 +1,7 @@
+role VendorCMT
+	modelPermission: read
+
+	tablePermission dim_vendor = [CompanyName] == "CMT"
+
+	annotation PBI_Id = 843c2d4301be4b0ebc65654f2930b449
+

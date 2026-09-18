@@ -1,0 +1,177 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "9f08ac81962c84e09cd0",
+  "position": {
+    "x": 786.56805501492147,
+    "y": 136.05501492149995,
+    "z": 6,
+    "height": 314.62722200596858,
+    "width": 471.94083300895289,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "pieChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "TotalTips"
+                }
+              },
+              "queryRef": "_Measures.TotalTips",
+              "nativeQueryRef": "Tips",
+              "displayName": "Tips"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "TotalTolls"
+                }
+              },
+              "queryRef": "_Measures.TotalTolls",
+              "nativeQueryRef": "Tolls",
+              "displayName": "Tolls"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "TotalExtra"
+                }
+              },
+              "queryRef": "_Measures.TotalExtra",
+              "nativeQueryRef": "Extra",
+              "displayName": "Extra"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "TotalFare"
+                }
+              },
+              "queryRef": "_Measures.TotalFare",
+              "nativeQueryRef": "Fare",
+              "displayName": "Fare"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "TotalTips"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total Revenue'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "efbad54c3003e9a7d136",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "TotalTips"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6034d8a81ba209d80808",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "TotalTolls"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f586155d3aa711a072c8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "TotalExtra"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d7393412301783a81490",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "TotalFare"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

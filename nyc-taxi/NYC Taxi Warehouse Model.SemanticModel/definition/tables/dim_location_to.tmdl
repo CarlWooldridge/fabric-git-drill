@@ -1,0 +1,66 @@
+table dim_location_to
+	lineageTag: f4cde15e-a3d9-4eed-948a-3c9a88082b10
+
+	column LocationId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e592302-741a-4faf-a2e9-cd5cf4d8de1c
+		summarizeBy: none
+		sourceColumn: LocationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Borough
+		dataType: string
+		lineageTag: 489ae108-4845-4aff-85c3-683fb29c86ed
+		summarizeBy: none
+		sourceColumn: Borough
+
+		annotation SummarizationSetBy = Automatic
+
+	column Zone
+		dataType: string
+		lineageTag: cc84b0a8-1ea0-4de0-bbf1-880568d84210
+		summarizeBy: none
+		sourceColumn: Zone
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServiceZone
+		dataType: string
+		lineageTag: c9bd8541-4681-4870-b8d4-5d4a0d6ce722
+		summarizeBy: none
+		sourceColumn: ServiceZone
+
+		annotation SummarizationSetBy = Automatic
+
+	column NeighborhoodType
+		dataType: string
+		lineageTag: f6cadf26-228a-42a0-a00f-6597b42c68f6
+		summarizeBy: none
+		sourceColumn: NeighborhoodType
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsAirport
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9b1fcf2e-a473-49c2-a4e7-29b6d5aa1237
+		summarizeBy: none
+		sourceColumn: IsAirport
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_location_to = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("pqvferdbdyhuldownyhas22oui-ayl57dgrd6cutejfuixcgpgzgm.datawarehouse.fabric.microsoft.com", "NYCTaxiWH"),
+				  #"Navigation 1" = Source{[Schema = "gold", Item = "dim_location_to"]}[Data]
+				in
+				  #"Navigation 1"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

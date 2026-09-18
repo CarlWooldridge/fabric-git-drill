@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Emp Viewer Test Report Import"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "79b3eaaf-1bfb-ab5f-4375-3bf034067df9"
+  }
+}

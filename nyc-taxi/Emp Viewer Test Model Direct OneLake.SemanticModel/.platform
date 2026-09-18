@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Emp Viewer Test Model Direct OneLake"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a5a1eb2b-43ce-ab52-4791-976a936d6f11"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "CopyActivityPipeline_zorder"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f3fd00df-a0fe-9cdd-4e77-68bb3f7fb0f2"
+  }
+}

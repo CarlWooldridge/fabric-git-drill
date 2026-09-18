@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "CopyActivityPipeline"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4fd1cb9c-4569-98e7-48b7-298310787768"
+  }
+}

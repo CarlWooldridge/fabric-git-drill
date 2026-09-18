@@ -1,0 +1,49 @@
+table dim_vendor
+	lineageTag: b81284ae-b9b8-4f1e-b8a3-5e47aeb54f9a
+
+	column VendorID
+		dataType: int64
+		formatString: 0
+		lineageTag: 02c3f0e1-594f-496d-84db-6ed137b6d30a
+		summarizeBy: none
+		sourceColumn: VendorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column VendorName
+		dataType: string
+		lineageTag: 164136b4-241f-4e8d-b38c-b8489136b70e
+		summarizeBy: none
+		sourceColumn: VendorName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyName
+		dataType: string
+		lineageTag: 35bfe123-9263-4cb5-bcf0-e6bea55fa833
+		summarizeBy: none
+		sourceColumn: CompanyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column TechnologyPlatform
+		dataType: string
+		lineageTag: 626d87e7-e238-479e-b356-40cc337d6229
+		summarizeBy: none
+		sourceColumn: TechnologyPlatform
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_vendor = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("pqvferdbdyhuldownyhas22oui-ayl57dgrd6cutejfuixcgpgzgm.datawarehouse.fabric.microsoft.com", "NYCTaxiWH"),
+				  #"Navigation 1" = Source{[Schema = "gold", Item = "dim_vendor"]}[Data]
+				in
+				  #"Navigation 1"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,68 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowModernEvaluationEngine": true
+  },
+  "name": "GetData_DataFlow",
+  "queryGroups": [
+    {
+      "id": "0c32351f-e5ea-4c94-b9d8-a35bc859f16b",
+      "name": "Transform file from Query"
+    },
+    {
+      "id": "01d479cf-09fe-4846-b9f8-f18ef6f60ad6",
+      "name": "Helper queries",
+      "parentId": "0c32351f-e5ea-4c94-b9d8-a35bc859f16b"
+    }
+  ],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Query": {
+      "queryId": "464a7bce-d0f7-41dc-915c-4ba996951e85",
+      "queryName": "Query",
+      "loadEnabled": false
+    },
+    "Sample file": {
+      "queryId": "c7bd67d7-004a-4daf-98ac-90de898d5528",
+      "queryName": "Sample file",
+      "queryGroupId": "01d479cf-09fe-4846-b9f8-f18ef6f60ad6",
+      "loadEnabled": false
+    },
+    "Parameter": {
+      "queryId": "7ec5ba0f-c645-42b7-8414-fb4829483a18",
+      "queryName": "Parameter",
+      "queryGroupId": "01d479cf-09fe-4846-b9f8-f18ef6f60ad6",
+      "loadEnabled": false
+    },
+    "Transform Sample file": {
+      "queryId": "be74e012-6119-4818-9a59-f709e4192b73",
+      "queryName": "Transform Sample file",
+      "queryGroupId": "0c32351f-e5ea-4c94-b9d8-a35bc859f16b",
+      "loadEnabled": false
+    },
+    "Transform file": {
+      "queryId": "9865ceee-0aaf-40ea-9e20-e1c9b338dc8e",
+      "queryName": "Transform file",
+      "queryGroupId": "01d479cf-09fe-4846-b9f8-f18ef6f60ad6",
+      "loadEnabled": false
+    },
+    "Query_DataDestination": {
+      "queryId": "042c9026-a4a3-44f3-904c-c278b650c2be",
+      "queryName": "Query_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://azureopendatastorage.blob.core.windows.net/",
+      "kind": "AzureBlobs",
+      "connectionId": "{\"ClusterId\":\"3ae14c82-6b22-44d4-92f2-9f49cd4116b6\",\"DatasourceId\":\"a5db415b-5315-4f64-b0f1-dac50731fd42\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"3ae14c82-6b22-44d4-92f2-9f49cd4116b6\",\"DatasourceId\":\"1ed0624b-2cd8-4496-b743-95328d19fdb5\"}"
+    }
+  ]
+}

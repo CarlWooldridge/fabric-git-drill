@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Emp Viewer Test Report Direct WH"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "97b9b275-6ac8-8a40-489d-3fb3d919c9fb"
+  }
+}

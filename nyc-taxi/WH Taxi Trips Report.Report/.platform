@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "WH Taxi Trips Report"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "384a2ebe-f6b3-8b22-4581-7cecb94063b2"
+  }
+}

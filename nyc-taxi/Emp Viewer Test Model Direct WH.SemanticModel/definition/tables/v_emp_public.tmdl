@@ -1,0 +1,44 @@
+table v_emp_public
+	lineageTag: e3520fad-7d04-436d-b63b-c36d789f34d4
+	sourceLineageTag: [dbo].[v_emp_public]
+
+	column emp_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a4c3473f-dd8c-4ffc-bc09-aea3f33a4d91
+		sourceLineageTag: emp_id
+		summarizeBy: sum
+		sourceColumn: emp_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column emp_name
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: b65ef982-eee7-446c-9a9d-c52e4480dbc9
+		sourceLineageTag: emp_name
+		summarizeBy: none
+		sourceColumn: emp_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		sourceProviderType: varchar(20)
+		lineageTag: cff85599-d90a-4527-b3b6-fe55f34b7aa1
+		sourceLineageTag: region
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	partition v_emp_public = entity
+		mode: directLake
+		source
+			entityName: v_emp_public
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

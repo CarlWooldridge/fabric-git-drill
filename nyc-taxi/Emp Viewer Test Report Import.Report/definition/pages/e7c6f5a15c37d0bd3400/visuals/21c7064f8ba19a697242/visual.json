@@ -1,0 +1,195 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "21c7064f8ba19a697242",
+  "position": {
+    "x": 326.99654775604142,
+    "y": 61.864211737629461,
+    "z": 0,
+    "height": 256.29459148446495,
+    "width": 1153.325661680092
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "emp_demo"
+                    }
+                  },
+                  "Property": "emp_id"
+                }
+              },
+              "queryRef": "Sum(emp_demo.emp_id)",
+              "nativeQueryRef": "emp_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "emp_demo"
+                    }
+                  },
+                  "Property": "emp_name"
+                }
+              },
+              "queryRef": "emp_demo.emp_name",
+              "nativeQueryRef": "emp_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "emp_demo"
+                    }
+                  },
+                  "Property": "region"
+                }
+              },
+              "queryRef": "emp_demo.region",
+              "nativeQueryRef": "region"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "emp_demo"
+                    }
+                  },
+                  "Property": "email"
+                }
+              },
+              "queryRef": "emp_demo.email",
+              "nativeQueryRef": "email"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "emp_demo"
+                    }
+                  },
+                  "Property": "owner_upn"
+                }
+              },
+              "queryRef": "emp_demo.owner_upn",
+              "nativeQueryRef": "owner_upn"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "emp_demo"
+                    }
+                  },
+                  "Property": "salary"
+                }
+              },
+              "queryRef": "Sum(emp_demo.salary)",
+              "nativeQueryRef": "salary"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7db93a3569358c155c63",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "emp_demo"
+              }
+            },
+            "Property": "email"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0e59b9a3ed0863063046",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "emp_demo"
+              }
+            },
+            "Property": "owner_upn"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "24943543569904100193",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "emp_demo"
+              }
+            },
+            "Property": "salary"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "92bb7f875a56b61cdddb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "emp_demo"
+              }
+            },
+            "Property": "emp_id"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "63087b2f00d2d1093335",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "emp_demo"
+              }
+            },
+            "Property": "emp_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d61f9ac8e23c0cc82308",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "emp_demo"
+              }
+            },
+            "Property": "region"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "public_holidays",
+    "path": "/Tables/external",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/public_holidays",
+        "itemId": "77b33db3-1e84-4666-85a6-97a1cbc98a2a",
+        "workspaceId": "9c038915-69ba-4755-826d-a42ae8674693"
+      }
+    }
+  }
+]

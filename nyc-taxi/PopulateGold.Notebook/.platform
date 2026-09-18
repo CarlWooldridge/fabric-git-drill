@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "PopulateGold"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "119fe195-2382-bb2f-4e70-fe76d9243d3e"
+  }
+}
