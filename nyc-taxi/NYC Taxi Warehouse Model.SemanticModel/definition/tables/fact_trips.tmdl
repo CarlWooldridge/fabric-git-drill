@@ -282,9 +282,9 @@ table fact_trips
 		source =
 				let
 				  Source = Sql.Database("pqvferdbdyhuldownyhas22oui-ayl57dgrd6cutejfuixcgpgzgm.datawarehouse.fabric.microsoft.com", "NYCTaxiWH"),
-				  #"Navigation 1" = Source{[Schema = "gold", Item = "fact_trips"]}[Data]
+				  #"Navigation" = Source{[Schema = "gold", Item = "fact_trips"]}[Data]
 				in
-				  #"Navigation 1"
+				  #"Navigation"
 
 	changedProperty = Name
 
