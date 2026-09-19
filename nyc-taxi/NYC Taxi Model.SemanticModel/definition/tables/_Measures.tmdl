@@ -75,8 +75,8 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Set via TMSL createOrReplace
-	measure 'Test Measure' = 6
+	/// Set via TMSL from a Fabric notebook
+	measure 'Test Measure' = 7
 		formatString: 0
 		lineageTag: 09d26c70-51fe-4a54-b1df-29d64a5c3b05
 
