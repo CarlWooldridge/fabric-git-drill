@@ -14,6 +14,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Edited via XMLA from Tabular Editor
 	measure TotalRevenue = SUM('fact_trips'[totalAmount])
 		lineageTag: a425b7b7-6354-4f3f-9c2c-d7be603d0694
 
