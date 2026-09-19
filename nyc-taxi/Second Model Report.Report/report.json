@@ -1,0 +1,53 @@
+{
+  "config": "{\"version\":\"5.77\",\"themeCollection\":{\"baseTheme\":{\"name\":\"Fluent2-CY26SU09\",\"version\":{\"visual\":\"2.13.0\",\"report\":\"3.4.0\",\"page\":\"2.3.1\"},\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Fluent2-CY26SU09",
+            "path": "BaseThemes/Fluent2-CY26SU09.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 1080.00,
+      "name": "8ab3a0be6033267592d0",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0841444fcd2c0d4027e0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":103.93984962406014,\"y\":54.857142857142854,\"z\":0,\"width\":736.2406015037593,\"height\":280.0601503759398,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_triptype.Description\"},{\"queryRef\":\"_Measures.TripCnt\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_triptype\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Description\"},\"Name\":\"dim_triptype.Description\",\"NativeReferenceName\":\"Description\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"TripCnt\"},\"Name\":\"_Measures.TripCnt\",\"NativeReferenceName\":\"TripCnt\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 280.06,
+          "queryBinary": "H4sIAAAAAAAEAI2SQU/DMAyF/4vP1dSCuORINzigobFN44CmKqQGgpakShPYVPW/Y2dbKUhInBonz+99ddJB6YyRtm5BPHWwQloHrR4i+sNUBrl6kw2eJCA6SAe82KBvtbMgLjK48c6k9ntpEATUkMGMbMKBC22q4HUTDg3S/po/Iu+zQV2N1dUcZRs9tiPpNiOuHaqQMkq3i8YywmzfkPBIQegueoVLfPkuEkrfZ7DwrkGfAqbYKqbhLjo5E48gJ2MJK4L+YF/0aBWeGn7adHDC/i9W9RtrTWalDSOkYRKT89lfLEPvlrqvta21feW0hddGHm/r1rvY0Pbxlin3ncZJhFznWcETjs/BBbkDUSQfvvwl1jHJ2II3Njx7irzMxuaPFOk+eVW6SBziKs97/r/hjRRUzPaoIpvNkSat2jvNL6roKe0LgEUNiIUCAAA=",
+          "width": 736.24,
+          "x": 103.94,
+          "y": 54.86,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"bd581205c18d231c75b7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":104,\"y\":345,\"width\":736,\"height\":280,\"z\":1,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"_Measures.TotalRevenue\"}],\"Category\":[{\"queryRef\":\"dim_date.Year\",\"active\":true}],\"Series\":[{\"queryRef\":\"dim_date.Quarter\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_date\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"TotalRevenue\"},\"Name\":\"_Measures.TotalRevenue\",\"NativeReferenceName\":\"TotalRevenue\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Year\"},\"Name\":\"dim_date.Year\",\"NativeReferenceName\":\"Year\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Quarter\"},\"Name\":\"dim_date.Quarter\",\"NativeReferenceName\":\"Quarter\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"TotalRevenue\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 280.00,
+          "queryBinary": "H4sIAAAAAAAEAKVS32vCMBD+X/IcRGVPfdzm9jAcakUYQyQk55bRJCVNRCn933eXtq6TCcLeet99v0ivZg/OGGFVxbL3muWA30HLZQR/ehRB5J+ihI7CspqlBX1swFfaWZZNOXvyziT5qzDAMrZjnM3QJpxomIOooocKwfWpxP244WeqGlKVNjslAgyYW46dCpAh+XdWlD87lujZVsDeLnoJK9j/DKlH03C28K4EnwLWLohiBQewERiu+r59xdEvAu2DPpAteLASOvqFS41PWERjb22lLlu9gfCDNv0rjBJ+rUQn+nf4Mgof4M/8fnWtwlm6RfG9tkrbDwpbeG1EeyXP3sUS4fa6MPYLfyUWpHnMJ9skzUE6q25QTFs+3eUKVEw4aQjY0DNgqzs+zM+FKQu6l+YyZ+3KBCN+PuUJDrMjyEjGcwhey+pF0+FPGkz+BuEXOvYsAwAA",
+          "width": 736.00,
+          "x": 104.00,
+          "y": 345.00,
+          "z": 1.00
+        }
+      ],
+      "width": 1920.00
+    }
+  ]
+}
